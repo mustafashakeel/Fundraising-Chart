@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+
+        <script language="javascript" type="text/javascript" src="jliontherm.js"></script>
+        <link rel="stylesheet" type="text/css" href="jliontherm.css">
+              <style type="text/css">   
+            #thermometer 
+            {
+                position: absolute; top:520px; left:50px;
+            
+                border: solid 1px black;
+            }     
+        </style>
+         <script type="text/javascript" language="javascript">
+            var oTherm = new jlionThermometer(0, 100, false, false);
+        </script>  
+</head>
+
+<body>
+  <style type="text/css">   
+            <div id="thermometer"/>     
+        </style>
+     <div id="value">Value: <input type="text" size="10" id="txtValue" value="60" /></div>
+        <input type="button" value="refresh" onclick="oTherm.RefreshByID('txtValue');" />
+  
+</body>
+</html>
